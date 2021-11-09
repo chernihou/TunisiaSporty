@@ -24,6 +24,4 @@ public class Commande {
     private String prenom_client;
     private String adresse_client;
     private int tel_client;
-
-
 }

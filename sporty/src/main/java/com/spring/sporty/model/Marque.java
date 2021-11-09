@@ -21,9 +21,6 @@ public class Marque {
     @OneToMany(mappedBy = "marque",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Produit> Produits;
 
-
-
-
     public Marque() {
     }
 
