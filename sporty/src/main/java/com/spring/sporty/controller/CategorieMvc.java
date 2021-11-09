@@ -6,27 +6,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
 import java.util.List;
-
-@Controller
+@RestController
+//@Controller
 public class CategorieMvc {
     @Autowired
     CategorieService agent;
+    private Categorie c;
+    private BindingResult result;
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("index");
+        return mv;
+    }
 
     @RequestMapping(value = "/categories/add", method = RequestMethod.GET)
-    public ModelAndView form_add() {
+    public ModelAndView form_add(){
         ModelAndView mv = new ModelAndView();
         Categorie categorie = new Categorie();
         mv.addObject("Formcategorie", categorie);
         mv.setViewName("categorie");
         return mv;
+
     }
     @RequestMapping(value = "/categories/save", method = RequestMethod.POST)
     public ModelAndView save(@Validated @ModelAttribute("Formcategorie") Categorie c, BindingResult result) {

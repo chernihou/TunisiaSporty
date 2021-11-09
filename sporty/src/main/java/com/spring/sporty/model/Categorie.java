@@ -16,16 +16,17 @@ import java.util.List;
 public class Categorie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
-    private String nom_cat;
+    private Long id;
+    private String nomcat;
 
     @OneToMany(mappedBy = "categorie",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Produit> Produits;
 
     public Categorie() {
     }
-    public Categorie(String id, String nom_cat) {
+    public Categorie(Long id, String nomcat) {
         this.id = id;
-        this.nom_cat = nom_cat;
+        this.nomcat = nomcat;
     }
+
 }
