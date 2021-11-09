@@ -22,11 +22,8 @@ public class Categorie {
     @OneToMany(mappedBy = "categorie",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Produit> Produits;
 
-
-
     public Categorie() {
     }
-
     public Categorie(String id, String nom_cat) {
         this.id = id;
         this.nom_cat = nom_cat;
