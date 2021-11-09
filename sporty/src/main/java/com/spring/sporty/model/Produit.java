@@ -23,7 +23,6 @@ public class Produit {
     @ManyToOne(optional = false)
     @JoinColumn(name="marque_id", referencedColumnName = "id")
     private Marque marque;
-
     public Produit() {
     }
 
