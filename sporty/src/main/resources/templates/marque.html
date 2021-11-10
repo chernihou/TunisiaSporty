@@ -23,15 +23,15 @@
             <div class="container">
                 <h2> Gestion sporty</h2>
 
-                <h6>Formulaire ajouter categorie</h6>
+                <h6>Formulaire d'ajouter des marques</h6>
                 <br>
             </div>
             <div class="container">
-                <form th:object="${Formcategorie}" method="Post" th:action="@{/categories/save}">
+                <form th:object="${Formmarque}" method="Post" th:action="@{/marques/save}">
                     <div class="form-group">
-                        <label for="nomcat">Nom</label>
-                        <input type="text" class="form-control" id="nomcat" th:field="*{nomcat}">
-                        <div class="alert alert-warning" th:if="${#fields.hasErrors('nomcat')}" th:errors="*{nomcat}"></div>
+                        <label for="nommarque">Nom</label>
+                        <input type="text" class="form-control" id="nommarque" th:field="*{nommarque}">
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('nommarque')}" th:errors="*{nommarque}"></div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

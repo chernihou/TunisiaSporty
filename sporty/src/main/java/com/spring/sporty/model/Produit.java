@@ -18,8 +18,9 @@ public class Produit {
     private String designation;
     private double prix;
     private int quantite;
+    private String genre;
     @ManyToOne(optional = false)
-   @JoinColumn(name="categorie_id", referencedColumnName = "id")
+    @JoinColumn(name="categorie_id", referencedColumnName = "id")
     private Categorie categorie;
     @ManyToOne(optional = false)
     @JoinColumn(name="marque_id", referencedColumnName = "id")
@@ -27,10 +28,12 @@ public class Produit {
 
     public Produit() {
     }
-    public Produit(Long id, String designation, double prix, int quantite) {
+
+    public Produit(Long id, String designation, double prix, int quantite, String genre) {
         this.id = id;
         this.designation = designation;
         this.prix = prix;
         this.quantite = quantite;
+        this.genre = genre;
     }
 }

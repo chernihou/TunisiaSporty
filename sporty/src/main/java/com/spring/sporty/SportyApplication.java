@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SportyApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SportyApplication.class, args);
 	}
 

@@ -38,11 +38,8 @@ public class ProduitServiceImpl implements ProduitService{
 
 //    @Override
 //    public List<Produit> search_categorie(String categorie) {
-//       return agent.findByCategorie(categorie);
+//       return agent.findBycat(categorie);
 //    }
-//
-//    @Override
-//    public List<Produit> advanced_search(String categorie, String pseudo) {
-//        return agent(categorie,"%"+pseudo+"%");
-//    }
+
+
 }

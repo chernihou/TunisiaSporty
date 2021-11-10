@@ -11,6 +11,6 @@ public interface ProduitService {
     public void delete_produit(long id);
     public  Produit update_produit(Produit d);
     public List<Produit> findAll();
-   // public  List<Produit>search_categorie(String categorie);
+  //  public  List<Produit>search_categorie(String categorie);
   //  public  List<Produit>advanced_search(String categorie,String pseudo);
 }

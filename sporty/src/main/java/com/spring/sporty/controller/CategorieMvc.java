@@ -3,7 +3,6 @@ package com.spring.sporty.controller;
 import com.spring.sporty.model.Categorie;
 import com.spring.sporty.service.CategorieService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -18,13 +17,6 @@ public class CategorieMvc {
     CategorieService agent;
     private Categorie c;
     private BindingResult result;
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView index() {
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("index");
-        return mv;
-    }
 
     @RequestMapping(value = "/categories/add", method = RequestMethod.GET)
     public ModelAndView form_add(){
