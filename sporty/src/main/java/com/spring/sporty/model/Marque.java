@@ -20,10 +20,11 @@ public class Marque {
     private String nom_marque;
     @OneToMany(mappedBy = "marque",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Produit> Produits;
+
     public Marque() {
     }
 
-    public Marque(String id_marque, String nom_marque) {
+    public Marque(String id, String nom_marque) {
         this.id = id;
         this.nom_marque = nom_marque;
     }

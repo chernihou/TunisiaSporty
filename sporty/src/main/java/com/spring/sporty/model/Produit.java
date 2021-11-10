@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name="produits")
 public class Produit {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -23,9 +24,9 @@ public class Produit {
     @ManyToOne(optional = false)
     @JoinColumn(name="marque_id", referencedColumnName = "id")
     private Marque marque;
+
     public Produit() {
     }
-
     public Produit(Long id, String designation, double prix, int quantite) {
         this.id = id;
         this.designation = designation;
